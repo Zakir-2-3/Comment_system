@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="./assets/icons/favicon-icon.svg"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Система комментирования</title>
+  </head>
+  <body>
+    <header class="header"></header>
+    <main class="main">
+      <aside class="aside"></aside>
+      <div class="main-container">
+        <section class="first-section">
+          <div class="first-section__inner-container">
+            <div class="first-section__inner-container--block"></div>
+            <div class="first-section__inner-container--block"></div>
+            <div class="first-section__inner-container--block"></div>
+            <div class="first-section__inner-container--block"></div>
+            <div class="first-section__inner-container--block"></div>
+            <div class="first-section__inner-container--block"></div>
+            <div class="first-section__inner-container--block"></div>
+            <div class="first-section__inner-container--block"></div>
+            <div class="first-section__inner-container--block"></div>
+          </div>
+        </section>
+        <section class="second-section">
+          <div class="second-section__comment-filter">
+            <div class="second-section__comment-filter--block">
+              <span class="comment-filter__span-text"
+                >Комментарии <span id="number-comments">(0)</span></span
+              >
+            </div>
+            <div class="second-section__comment-filter--block">
+              <button
+                class="filter-btn"
+                id="filter-settings-comment"
+                aria-expanded="false"
+                aria-controls="list"
+              >
+                По дате
+              </button>
+              <img
+                src="./assets/icons/comment-filter-arrow.svg"
+                id="filter-sorting-comment"
+                alt="comment-arrow"
+              />
+              <div class="filter-comment__container">
+                <ul class="filter-comment__container-menu" id="filter-list">
+                  <li
+                    class="filter-comment__container-menu--item filter-active"
+                  >
+                    <img src="./assets/icons/check-mark.svg" alt="check-mark" />
+                    По дате
+                  </li>
+                  <li class="filter-comment__container-menu--item">
+                    По количеству оценок
+                  </li>
+                  <li class="filter-comment__container-menu--item">
+                    По актуальности
+                  </li>
+                  <li class="filter-comment__container-menu--item">
+                    По количеству ответов
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="second-section__comment-filter--block">
+              <span id="filter-favorites">
+                <span class="comment-filter__span-text">Избранное</span>
+                <img
+                  src="./assets/icons/favorites-all.svg"
+                  id="favorites-all-icon"
+                  alt="favorites-all"
+                />
+              </span>
+            </div>
+          </div>
+          <div class="second-section__comment-inner-container">
+            <div class="second-section__send-comments-container">
+              <div class="user-info__avatar">
+                <img class="main-user-avatar" src="" alt="user-img" />
+              </div>
+              <div class="second-section__form-container">
+                <form action="" method="get" class="second-section__form">
+                  <label class="second-section__label">
+                    <div class="form-text-container">
+                      <span class="user-info__name"></span>
+                      <p class="error-message__empty-comments">
+                        Комментарий не может быть пустым!
+                      </p>
+                      <p class="input__max-text">Макс. 1000 символов</p>
+                      <output class="output">0</output>
+                    </div>
+                    <div
+                      class="input-message"
+                      contenteditable="true"
+                      placeholder="Введите текст"
+                    ></div>
+                  </label>
+                </form>
+              </div>
+              <div class="max-text__container">
+                <p id="max-text"></p>
+                <button
+                  disabled
+                  type="button"
+                  id="btn"
+                  class="second-section__btn answer-button"
+                >
+                  Отправить
+                </button>
+              </div>
+            </div>
+            <div class="second-section__answer-comments-container"></div>
+          </div>
+        </section>
+      </div>
+    </main>
+    <script src="./build/index.js" type="module"></script>
+  </body>
+</html>
